@@ -1,0 +1,7 @@
+@charset "UTF-8";
+.name{
+    font-size: large;
+    color: blueviolet;
+    font-style: italic;
+    text-align: center;
+}
