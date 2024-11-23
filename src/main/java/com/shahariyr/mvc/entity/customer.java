@@ -9,7 +9,6 @@ public class customer {
 
 	@NotNull(message = "required lastname")
 	@Size(min = 1, message = "required lastname")
-
 	private String lastname;
 
 	public String getFirstName() {
