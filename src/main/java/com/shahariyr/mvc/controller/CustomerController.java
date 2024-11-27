@@ -11,8 +11,10 @@ public class CustomerController {
 	@GetMapping("/")
 	public String showform(Model theModel) {
 
-		theModel.addAttribute("customer", new customer()); // "customer" is the model name. Which has to be same as the thymeleaf file.
+		theModel.addAttribute("customer", new customer());
 
 		return "Customer-form";
 	}
 }
+//"customer" is the model name. 
+//Which has to be same as the thymeleaf file action.
