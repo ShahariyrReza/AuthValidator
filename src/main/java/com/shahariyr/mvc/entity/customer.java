@@ -11,6 +11,7 @@ public class customer {
 	@Size(min = 1, message = "required lastname")
 	private String lastname;
 
+	// Define only getter setter for validation a form.
 	public String getFirstName() {
 		return firstName;
 	}
