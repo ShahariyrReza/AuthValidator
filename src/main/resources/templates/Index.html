@@ -1,10 +1,24 @@
 <!DOCTYPE html>
-<html xmlns:th = "http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <link rel="stylesheet" th:href="@{/resources/static/Style.css}">
-    <title>Document</title>
+<link rel="stylesheet" th:href="@{/css/Style.css}">
+<title>Customer Registration</title>
+<style>
+.error {
+	color: blueviolet;
+}
+</style>
 </head>
 <body>
-    <p th:text="'Shahariyr Reza'" class="name">Learning thymeleaf</p>
+	<form th:action="@{/processForm}" th:object="${Customer}" method="post">
+
+		Fist Name: <input type="text" th:field="*{firstName}"> 
+		Last Name: <input type="text" th:field="*{lastname}"> 
+		
+		<span th:if="${#field.hasError('lastname')}" th:error="{'lastName'}" class="error"></span> 
+<br><br> 
+        <input type="submit" value="submit">
+
+	</form>
 </body>
 </html>
