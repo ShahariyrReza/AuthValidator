@@ -14,11 +14,11 @@ import jakarta.validation.Valid;
 @Controller
 public class CustomerController {
 
-	@GetMapping("/")
+	@GetMapping("/home")
 	public String showform(Model theModel) {
 
 		theModel.addAttribute("customer", new customer());//"customer" is the model name. 
-		//Which has to be same as the thymeleaf file action.
+		//Which has to be same as the template file action.
 
 		return "customer-form";
 	}
