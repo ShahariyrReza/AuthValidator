@@ -9,9 +9,8 @@ public class customer {
 
 	@NotNull(message = "required lastname") // last name can't be null
 	@Size(min = 1, message = "required lastname")
-	private String lastname;
+	private String lastName;
 
-	// Define only getter setter for validation a form.
 	public String getFirstName() {
 		return firstName;
 	}
@@ -20,11 +19,14 @@ public class customer {
 		this.firstName = firstName;
 	}
 
-	public String getLastname() {
-		return lastname;
+	public String getLastName() {
+		return lastName;
 	}
 
-	public void setLastname(String lastname) {
-		this.lastname = lastname;
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
+
+	// Define only getter setter for validation a form.
+
 }
