@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="UTF-8">
-<title>confirmation page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>confirmation page</title>
 </head>
 <body>
-<p> Sala kaj ses </p>
+ The customer name is:<span th:text="${customer.firstName +''+customer.lastName}"> </span>
 </body>
 </html>
