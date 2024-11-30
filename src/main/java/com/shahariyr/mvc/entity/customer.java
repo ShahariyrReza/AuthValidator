@@ -1,5 +1,8 @@
 package com.shahariyr.mvc.entity;
 
+
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
@@ -10,6 +13,18 @@ public class customer {
 	@NotNull(message = "required lastname") // last name can't be null
 	@Size(min = 1, message = "required lastname")
 	private String lastName;
+	
+	@Min(value = 0, message = "minimum Id number is getter that 0")
+	@Max(value = 10, message = "max Id number is less that 10")
+	private int customerId;
+
+	public int getCustomerId() {
+		return customerId;
+	}
+
+	public void setCustomerId(int customerId) {
+		this.customerId = customerId;
+	}
 
 	public String getFirstName() {
 		return firstName;
