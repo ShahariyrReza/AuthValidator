@@ -6,6 +6,8 @@
     <title>confirmation page</title>
 </head>
 <body>
- The customer name is:<span th:text="${customer.firstName +''+customer.lastName}"> </span>
+ The customer name is:<span th:text="${customer.firstName +' '+customer.lastName}"> </span> <br>
+ 
+ The Id number of the customer is : <span th:text="${customer.customerId}"> </span>
 </body>
 </html>
