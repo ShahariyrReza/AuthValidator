@@ -21,13 +21,17 @@
         <form th:action="@{/processForm}" th:object="${customer}" method="POST">
 
             Fist Name : <input type="text" th:field="*{firstName}"> <br> <br>
-            Last Name : <input type="text" th:field="*{lastName}">
+            Last Name : <input type="text" th:field="*{lastName}"> <br> <br>
 
             <span th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}" class="error"></span>
             <br>
+            
+            CustomerID: <input type="text" th:field="*{customerId}">
+            <span th:if="${#fields.hasErrors('customerId')}" th:errors="*{customerId}" class="error"></span>
+            
+            <br>
             <br>
             <input type="submit" value="submit">
-            input ...
 
         </form>
 
