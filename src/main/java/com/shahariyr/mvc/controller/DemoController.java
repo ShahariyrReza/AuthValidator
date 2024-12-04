@@ -9,9 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-
 import com.shahariyr.mvc.entity.customer;
-
 import jakarta.validation.Valid;
 
 @Controller
@@ -31,8 +29,8 @@ public class DemoController {
 	@GetMapping("/")
 	public String showform(Model theModel) {
 
-		theModel.addAttribute("customer", new customer());// "customer" is the model name.
-		// Which has to be same as the template file action.
+		theModel.addAttribute("customer", new customer());// "customer" is the model name.also HTML page object
+		// Which has to be same as the template file object.
 
 		return "customer-form";
 	}
@@ -47,3 +45,10 @@ public class DemoController {
 		}
 	}
 }
+
+
+
+
+
+
+
