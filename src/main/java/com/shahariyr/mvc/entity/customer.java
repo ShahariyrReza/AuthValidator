@@ -4,6 +4,7 @@ package com.shahariyr.mvc.entity;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 
 public class customer {
@@ -17,6 +18,18 @@ public class customer {
 	@Min(value = 0, message = "minimum Id number is getter that 0")
 	@Max(value = 10, message = "max Id number is less that 10")
 	private int customerId;
+	
+	
+	@Pattern(regexp = "^[a-zA-Z0-9]{5}", message = "5 string required")
+	private String postalCode;
+
+	public String getPostalCode() {
+		return postalCode;
+	}
+
+	public void setPostalCode(String postalCode) {
+		this.postalCode = postalCode;
+	}
 
 	public int getCustomerId() {
 		return customerId;
