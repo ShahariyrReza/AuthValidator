@@ -1,22 +1,24 @@
 package com.shahariyr.mvc.entity;
 
 
-import jakarta.validation.constraints.Max;
-import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 
 public class customer {
 
-	private String firstName;
+	private String userName;
 
-	@NotNull(message = "required lastname") // last name can't be null
-	@Size(min = 1, message = "required lastname")
-	private String lastName;
+	@NotNull(message = "required") // last name can't be null
+	@Size(min = 1, message = "required")
+	@Email
+	private String email;
 	
-	@Min(value = 0, message = "minimum Id number is getter that 0")
-	@Max(value = 10, message = "max Id number is less that 10")
+
+
+	//@Min(value = 0, message = "minimum Id number is getter that 0")
+	//@Max(value = 10, message = "max Id number is less that 10")
 	private int customerId;
 	
 	
@@ -30,6 +32,14 @@ public class customer {
 	public void setPostalCode(String postalCode) {
 		this.postalCode = postalCode;
 	}
+	
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
 	public int getCustomerId() {
 		return customerId;
@@ -39,20 +49,13 @@ public class customer {
 		this.customerId = customerId;
 	}
 
-	public String getFirstName() {
-		return firstName;
+
+	public String getUserName() {
+		return userName;
 	}
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
-	public String getLastName() {
-		return lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 
 	// Define only getter setter for validation a form.
