@@ -1,45 +1,43 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 
 <head>
-    <link rel="stylesheet" th:href="@{/static/Style.css}">
-    <title>Customer Registration</title>
-    <style>
-        .error {
-            color: rgb(255, 0, 0);
-        }
-
-        .div1 {
-            position: absolute;
-            left: 42%;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup Page</title>
+  <link rel="stylesheet" th:href="@{/style.css}">
 </head>
 
-<body background="color:rgb(202, 185, 218)" bottommargin="10px">
-    <div class="div1">
-        <form th:action="@{/processForm}" th:object="${customer}" method="POST">
-
-            Fist Name : <input type="text" th:field="*{firstName}"> <br> <br>
-            Last Name : <input type="text" th:field="*{lastName}">
-
-            <span th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}" class="error"></span>
-            <br>
-            
-            CustomerID: <input type="text" th:field="*{customerId}">
-            <span th:if="${#fields.hasErrors('customerId')}" th:errors="*{customerId}" class="error"></span>
-            
-            <br>
-            Postal Code: <input type="text" th:field="*{postalCode}">
-            <span th:if="${#fields.hasErrors('postalCode')}" th:errors="*{postalCode}" class="error"></span>
-            
-            <br>
-            <br>
-            <input type="submit" value="submit">
-
-        </form>
-
+<body>
+  <div class="container">
+    <!-- Left Panel -->
+    <div class="left-panel">
+      <h1>Come join us!</h1>
+      <p>
+        We are so excited to have you here. If you haven't already,create an 
+        account to get access to exclusive offers,rewards, and discounts.
+      </p>
+      <a th:href="@{/login}" class="signin-link">Already have an account? Signin.</a>
     </div>
+
+    <!-- Right Panel -->
+    <div class="right-panel">
+      <h2>Signup</h2>
+      <form th:action="@{/processForm}" th:object="${customer}" th:method="POST">
+
+        <input type="text" placeholder="Username" th:field="*{userName}">
+        <input type="email" placeholder="Email" th:field="*{email}">
+        <span th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="error"></span> 
+        <input type="text" placeholder="User Id" th:field="*{customerId}"> 
+        <span th:if="${#fields.hasErrors('customerId')}" th:errors="*{customerId}" class="error"></span> 
+        <input type="text" placeholder="Postal Code" th:field="*{postalCode}"> 
+        <span th:if="${#fields.hasErrors('postalCode')}" th:errors="*{postalCode}"class="error"></span>
+
+
+        <button type="submit">Signup</button>
+      </form>
+    </div>
+  </div>
 </body>
 
 </html>
