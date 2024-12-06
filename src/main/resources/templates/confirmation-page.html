@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>confirmation page</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>confirmation page</title>
 </head>
+
 <body>
- The customer name is:<span th:text="${customer.userName}"> </span> <br>
- 
- The Id number of the customer is : <span th:text="${customer.customerId}"> </span> <br>
- 
-  Postal Code is : <span th:text="${customer.postalCode}"> </span>
+
+<h2>Customer Information</h2> <br> <br>
+	User Name: <span th:text="${customer.userName}"> </span>
+	<br> 
+	Email :<span th:text="${customer.email}"> </span>
+	<br> 
+	Mobile Number :<span th:text="${customer.mobileNumber}"> </span>
+	<br> 
 </body>
 </html>
