@@ -1,9 +1,9 @@
 package com.shahariyr.mvc.entity;
 
 import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 
 public class customer {
@@ -19,12 +19,15 @@ public class customer {
 	@Size(min = 1, message = "required")
 	@Email
 	private String email;
-
-	@Min(value = 0, message = "Invalid mobile number")
-	private Integer mobileNumber;
+	
+	@Size(min = 11,max = 14, message = "use a valid phone number")
+	@Pattern(regexp = "^[+\\d]+$", message = "use a valid phone number")
+	private String mobileNumber;
 
 	@NotBlank(message = "Password cannot be blank")
 	@Size(min = 8, max = 20, message = "Password must be between 8 and 20 characters")
+	//@Pattern(regexp = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d){8,}$", 
+    //message = "Password must have at least one uppercase letter, one lowercase letter, one number, and one special character")
 	private String password;
 	
 	
@@ -50,11 +53,11 @@ public class customer {
 	}
 	
 
-	public Integer getMobileNumber() {
+	public String getMobileNumber() {
 		return mobileNumber;
 	}
 
-	public void setMobileNumber(Integer mobileNumber) {
+	public void setMobileNumber(String mobileNumber) {
 		this.mobileNumber = mobileNumber;
 	}
 
