@@ -1,4 +1,4 @@
-/* styles.css */
+/* General Styles */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -19,9 +19,9 @@ body {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* Left Panel Styles */
 .left-panel {
   flex: 1;
-  background: linear-gradient(to bottom, #4a90e2, #005bea);
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -56,6 +56,16 @@ body {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
+/* Specific Colors for Panels */
+.left-panel.blue-panel {
+  background: linear-gradient(to bottom, #4a90e2, #005bea);
+}
+
+.left-panel.green-panel {
+  background: linear-gradient(to bottom, #4caf50, #008000);
+}
+
+/* Right Panel Styles */
 .right-panel {
   flex: 1;
   padding: 40px;
@@ -93,7 +103,7 @@ body {
 
 .right-panel button {
   padding: 10px;
-  background-color: #4a90e2;
+  background-color: #4caf50; /* Default button color */
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -103,5 +113,41 @@ body {
 }
 
 .right-panel button:hover {
-  background-color: #005bea;
+  background-color: #008000;
+}
+
+.or-signin {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #888;
+}
+
+.social-icons {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.social-icon.fb {
+  background-color: #3b5998;
+}
+
+.social-icon.google {
+  background-color: #db4a39;
+}
+
+.social-icon.linkedin {
+  background-color: #0077b5;
 }
