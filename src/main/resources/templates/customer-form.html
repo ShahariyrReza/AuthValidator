@@ -36,7 +36,7 @@
 				<input type="text"placeholder="Mobile Number" th:field="*{mobileNumber}"> 
 				<span th:if="${#fields.hasErrors('mobileNumber')}" th:errors="*{mobileNumber}"class="error"></span>
 				 
-				<input type="text" placeholder="password"th:field="*{password}"> 
+				<input type="password" placeholder="password"th:field="*{password}"> 
 				<span th:if="${#fields.hasErrors('password')}" th:errors="*{password}"class="error"></span>
 				
 				<button type="submit">Signup</button>
