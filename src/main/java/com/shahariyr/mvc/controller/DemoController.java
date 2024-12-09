@@ -26,13 +26,22 @@ public class DemoController {
 		dataBinder.registerCustomEditor(String.class, stringTrimmerEditor);
 	}
 
-	@GetMapping("/")
-	public String showform(Model theModel) {
+	@GetMapping("/signup")
+	public String showSignUpform(Model theModel) {
 
 		theModel.addAttribute("customer", new customer());// "customer" is the model name.also HTML page object
 		// Which has to be same as the template file object.
 
-		return "customer-form";
+		return "signup";
+	}
+	
+	@GetMapping("/login")
+	public String showLogInform(Model theModel) {
+
+		theModel.addAttribute("customer", new customer());// "customer" is the model name.also HTML page object
+		// Which has to be same as the template file object.
+
+		return "login";
 	}
 	
 	@PostMapping("/processForm")
