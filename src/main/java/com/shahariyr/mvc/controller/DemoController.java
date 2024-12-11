@@ -48,9 +48,9 @@ public class DemoController {
 	public String processForm(@Valid @ModelAttribute("customer") customer theCustomer, BindingResult theBindingResult) {
 
 		if (theBindingResult.hasErrors()) {
-			return "customer-form";
+			return "signup";
 		} else {
-			return "confirmation-page";
+			return "processForm";
 		}
 	}
 }
