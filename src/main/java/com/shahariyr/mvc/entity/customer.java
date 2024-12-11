@@ -1,7 +1,6 @@
 package com.shahariyr.mvc.entity;
 
 import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
@@ -24,12 +23,12 @@ public class customer {
 	@Pattern(regexp = "^[+\\d]+$", message = "use a valid phone number")
 	private String mobileNumber;
 
-	@NotBlank(message = "Password cannot be blank")
+	@NotNull(message = "Required Password")
+	//@NotBlank(message = "Required Password")
 	@Size(min = 8, max = 20, message = "Password must be between 8 and 20 characters")
 	//@Pattern(regexp = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d){8,}$", 
-    //message = "Password must have at least one uppercase letter, one lowercase letter, one number, and one special character")
+    //message = "Password must have at least one upper case letter, one lower case letter, one number, and one special character")
 	private String password;
-	
 	
 	
 
