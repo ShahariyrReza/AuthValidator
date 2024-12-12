@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+
+import com.shahariyr.mvc.entity.LoginCustomer;
 import com.shahariyr.mvc.entity.customer;
 import jakarta.validation.Valid;
 
@@ -36,21 +38,33 @@ public class DemoController {
 	}
 	
 	@GetMapping("/login")
-	public String showLogInform(Model theModel) {
+	public String showLogInform(Model theModel1) {
 
-		theModel.addAttribute("customer", new customer());// "customer" is the model name.also HTML page object
+		theModel1.addAttribute("LoginCustomer", new LoginCustomer());// "LoginCustomer" is the model name.also HTML page object
 		// Which has to be same as the template file object.
 
 		return "login";
 	}
 	
-	@PostMapping("/processForm")
+	//process form for login page;
+	@PostMapping("/processLoginForm")
+	public String processForm(@Valid @ModelAttribute("LoginCustomer") LoginCustomer theLoginCustomer, BindingResult theBindingResult) {
+
+		if (theBindingResult.hasErrors()) {
+			return "login";
+		} 
+		else {
+			return "processForm";
+		}
+	}
+	
+	
+	//process form for sign up page;
+	@PostMapping("/processSignupForm")
 	public String processForm(@Valid @ModelAttribute("customer") customer theCustomer, BindingResult theBindingResult) {
 
 		if (theBindingResult.hasErrors()) {
-			if (theBindingResult.hasFieldErrors(theCustomer.getMobileNumber())) {
-				return null;
-			}
+			return "signup";
 		} else {
 			return "processForm";
 		}
