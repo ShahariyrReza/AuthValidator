@@ -25,7 +25,7 @@
 	<!-- Right Panel -->
 		<div class="right-panel">
 			<h2>Sign up</h2>
-			<form th:action="@{/processForm}" th:object="${customer}"th:method="POST">
+			<form th:action="@{/processSignupForm}" th:object="${customer}"th:method="POST">
 			
 				<input type="text" placeholder="Username" th:field="*{userName}" required>
 				<span th:if="${#fields.hasErrors('userName')}" th:errors="*{userName}"class="error"></span>
@@ -33,7 +33,7 @@
 				<input type="email" placeholder="Email" th:field="*{email}" required>
 				<span th:if="${#fields.hasErrors('email')}" th:errors="*{email}"class="error"></span> 
 				
-				<input type="text"placeholder="Mobile Number" th:field="*{mobileNumber}" required> 
+				<input type="text"placeholder="Mobile Number" th:field="*{mobileNumber}"> 
 				<span th:if="${#fields.hasErrors('mobileNumber')}" th:errors="*{mobileNumber}"class="error"></span>
 				 
 				<input type="password" placeholder="password"th:field="*{password}" required> 
