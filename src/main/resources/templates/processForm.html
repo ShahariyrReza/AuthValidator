@@ -1,20 +1,83 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>confirmation page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confirmation Page</title>
+  <style>
+    /* Global Styles */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #333;
+    }
+
+    .confirmation-container {
+      width: 100%;
+      max-width: 500px;
+      padding: 20px;
+      text-align: center;
+      background-color: #fff;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+
+    .confirmation-container h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      color: #4caf50;
+    }
+
+    .confirmation-container p {
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    .confirmation-container .cta {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .confirmation-container .cta a {
+      text-decoration: none;
+      color: white;
+      background-color: #4caf50;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 14px;
+      transition: background-color 0.3s ease;
+    }
+
+    .confirmation-container .cta a:hover {
+      background-color: #45a049;
+    }
+
+    .confirmation-container .cta a.secondary {
+      background-color: #008cba;
+    }
+
+    .confirmation-container .cta a.secondary:hover {
+      background-color: #0078a4;
+    }
+  </style>
 </head>
-
 <body>
-
-<h2>Customer Information</h2> <br> <br>
-	User Name: <span th:text="${customer.userName}"> </span>
-	<br> 
-	Email :<span th:text="${customer.email}"> </span>
-	<br> 
-	Mobile Number :<span th:text="${customer.mobileNumber}"> </span>
-	<br> 
+  <div class="confirmation-container">
+    <h1>Welcome!</h1>
+    <p>Congratulations! Your login/sign-up was successful. I am excited to have you onboard.</p>
+    <p>What would you like to do next?</p>
+    <div class="cta">
+      <a href="/login">Go to Login Form</a>
+      <a href="/signup" class="secondary">Back to Signup Form</a>
+    </div>
+  </div>
 </body>
 </html>
