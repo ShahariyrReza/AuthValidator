@@ -1,6 +1,6 @@
 # AuthValidator
 
-AuthValidator is a Java Spring Boot project designed to provide a seamless and secure authentication experience. The application includes a **Login Form** and a **Sign-Up Form** with built-in validation rules for fields such as username, mobile number, email, and password. Users must enter valid data to log in or sign up successfully. Invalid entries return specific error messages to guide users.
+AuthValidator is a Java Spring Boot project designed to provide a seamless and secure authentication experience. The application includes a **Login Form** and a **Sign-Up Form** with built-in validation rules for username, mobile number, email, and password fields. Users must enter valid data to log in or sign up successfully. Invalid entries return specific error messages to guide users.
 
 ## Features
 
@@ -18,15 +18,18 @@ AuthValidator is a Java Spring Boot project designed to provide a seamless and s
   - `/processForm`: Processes the form submission and validates user data.
 - **Error Handling:** Specific error messages for invalid input.
 
-## Screenshots
 
 ### Login Page
+`GET` URI: `localhost:8080/login`
 ![Login Page](./Screenshoot/login.png)
+<br />
 
 ### Sign-Up Page
-![Sign-Up Page](./Screenshoot/signup.png).png)
+`GET` URI: `localhost:8080/signup`
+![Sign-Up Page](./Screenshoot/signup.png)
 
 ### Confirmation Page
+`POST` URI: `localhost:8080/processForm`
 ![Confirmation Page](./Screenshoot/dashboard.png)
 
 ## Installation
