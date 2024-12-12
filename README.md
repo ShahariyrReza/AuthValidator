@@ -12,12 +12,14 @@ AuthValidator is a Java Spring Boot project designed to provide a seamless and s
   - **Mobile Number:** Only valid numbers with optional `+` sign.
   - **Email:** Proper email format validation.
   - **Password:** Must adhere to the defined security standards.
+  - ---
 - **Endpoints:**
   - `/signup`: Displays the sign-up form.
   - `/login`: Displays the login form.
   - `/processForm`: Processes the form submission and validates user data.
-- **Error Handling:** Specific error messages for invalid input.
-
+- **Error Handling:** Specific error messages for invalid input. 
+---
+---
 
 ### Login Page
 `GET` URI: `localhost:8080/login`
