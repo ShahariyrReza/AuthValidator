@@ -21,13 +21,13 @@ AuthValidator is a Java Spring Boot project designed to provide a seamless and s
 ## Screenshots
 
 ### Login Page
-![Login Page](./Screenshot%20(85).png)
+![Login Page](./Screenshoot/login.png)
 
 ### Sign-Up Page
-![Sign-Up Page](./Screenshot%20(86).png)
+![Sign-Up Page](./Screenshoot/signup.png).png)
 
 ### Confirmation Page
-![Confirmation Page](./Screenshot%20(87).png)
+![Confirmation Page](./Screenshoot/dashboard.png)
 
 ## Installation
 
@@ -75,7 +75,7 @@ This project is licensed under the [MIT License](LICENSE).
 ## Contact
 For any inquiries or feedback, please contact:
 - **Name:** Shahariyr Reza
-- **Email:** your-email@example.com
-- **GitHub:** [yourusername](https://github.com/yourusername)
+- **Email:** shahariyr.reza@hotmail.com
+- **GitHub:** [Shahariyr Reza](https://github.com/ShahariyrReza)
 
  
