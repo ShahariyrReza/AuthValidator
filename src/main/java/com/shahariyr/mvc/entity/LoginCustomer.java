@@ -7,6 +7,10 @@ import jakarta.validation.constraints.Size;
 
 public class LoginCustomer {
 
+	
+	/* Two field for Log in page
+	 * User name and password */
+	
 	@NotNull(message = "username required")
 	private String username;
 
@@ -16,6 +20,8 @@ public class LoginCustomer {
 	private String password;
 
 
+	
+	/*Getter Setter method for Field*/
 	public String getUsername() {
 		return username;
 	}
