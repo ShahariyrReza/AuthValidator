@@ -10,34 +10,32 @@
 
 <body>
   <div class="signin-container">
-  
-    <!-- left Content Panel -->
-    <div class="signin-form">
-      <h2>Sign in</h2>
-      <form th:action="@{/processLoginForm}" th:object="${LoginCustomer}" th:method="POST" >
-      
-        <input type="text" th:field="*{username}" placeholder="Username" required >
-        <span th:if="${#fields.hasErrors('username')}" th:errors="*{username}"class="error"></span>
-        
-        <input type="password" th:field="*{password}" placeholder="Password" required >
-        <span th:if="${#fields.hasErrors('password')}" th:errors="*{password}"class="error"></span>
-        
-        <button type="submit">Sign in</button>
-      </form>
- 
-    </div>
 
-    <!-- Sign in Form -->
+		<!-- left Content Panel -->
+		<div class="signin-form">
+			<h2>Sign in</h2>
+			<form th:action="@{/processLoginForm}" th:object="${LoginCustomer}" th:method="POST">
+
+				<input type="text" th:field="*{username}" placeholder="Username"required> 
+				<span th:if="${#fields.hasErrors('username')}" th:errors="*{username}" class="error"> </span> 
+				<input type="password" th:field="*{password}" placeholder="Password" required> 
+				<span th:if="${#fields.hasErrors('password')}" th:errors="*{password}" class="error"></span>
+
+				<button type="submit">Sign in</button>
+				
+			</form>
+
+		</div>
+
+		<!-- Sign in Form -->
     <div class="left-content green-panel">
       <h1>Welcome back!</h1>
-      <p>Welcome back! We are so happy to have you here. It's great to see you again. We hope you had a safe and
-        enjoyable time away.</p>
+      <p>Welcome back! We are so happy to have you here. It's great to see you again. We hope you had a safe and enjoyable time away.</p>
       <a th:href="@{/signup}" class="cta-link">No account yet? Sign up.</a>
     </div>
 
-
-
   </div>
+  
 </body>
 
 </html>
