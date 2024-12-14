@@ -1,114 +1,111 @@
 /* Global Reset */
 body, html {
-  margin: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: #dcdcdc;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+	margin: 0;
+	font-family: 'Arial', sans-serif;
+	background-color: #dcdcdc;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
 }
 
 .signin-container {
-  display: flex;
-  width: 900px;
-  height: 450px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
+	display: flex;
+	width: 900px;
+	height: 450px;
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
 }
 
 /* right Content Panel  */
-
 .left-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
-  color: #fff;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 20px;
+	color: #fff;
 }
 
 .left-content h1 {
-  font-size: 28px;
-  margin-bottom: 15px;
+	font-size: 28px;
+	margin-bottom: 15px;
 }
 
 .left-content p {
-  font-size: 14px;
-  line-height: 1.5;
-  margin-bottom: 20px;
+	font-size: 14px;
+	line-height: 1.5;
+	margin-bottom: 20px;
 }
 
 .left-content .cta-link {
-  color: #fff;
-  text-decoration: none;
-  background-color: rgba(255, 255, 255, 0.2);
-  padding: 10px 20px;
-  border-radius: 20px;
-  transition: background-color 0.3s ease;
+	color: #fff;
+	text-decoration: none;
+	background-color: rgba(255, 255, 255, 0.2);
+	padding: 10px 20px;
+	border-radius: 20px;
+	transition: background-color 0.3s ease;
 }
 
 .left-content .cta-link:hover {
-  background-color: rgba(255, 255, 255, 0.3);
+	background-color: rgba(255, 255, 255, 0.3);
 }
 
 .green-panel {
-  background: linear-gradient(135deg, #4caf50, #008000);
-
+	background: linear-gradient(135deg, #4caf50, #008000);
 }
 
 /* Sign in Form */
 .signin-form {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 40px;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 40px;
 }
 
 .signin-form h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
-  font-weight: bold;
+	font-size: 24px;
+	margin-bottom: 20px;
+	font-weight: bold;
 }
 
 .signin-form form {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 300px;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	max-width: 300px;
 }
 
 .signin-form input {
-  margin-bottom: 15px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 14px;
-  background-color: #f7f7f7;
+	margin-bottom: 15px;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	font-size: 14px;
+	background-color: #f7f7f7;
 }
 
 .signin-form input::placeholder {
-  color: #aaa;
+	color: #aaa;
 }
 
 .signin-form button {
-  padding: 10px;
-  border: none;
-  background-color: #4caf50;
-  color: #fff;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+	padding: 10px;
+	border: none;
+	background-color: #4caf50;
+	color: #fff;
+	border-radius: 5px;
+	font-size: 16px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
 }
 
 .signin-form button:hover {
-  background-color: #008000;
+	background-color: #008000;
 }
-
